@@ -1,0 +1,173 @@
+.trends{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+
+  &__trend{
+    position: relative;
+    border: 2px solid black;
+    margin: 20px auto;
+    height: $trend-height-mobile;
+    flex-basis: 80%;
+    background-color: rgb(204, 204, 204);
+
+    &-image{
+      position: absolute;
+      height: 100%;
+      top:0;
+      left:0;
+      width: 100%;
+      &--desktop{
+        display: none;
+      }
+    }
+    &-logo{
+      z-index: 1;
+      position: absolute;
+      bottom:10%;
+      right: 20%;
+      width: 12%;
+    }
+    &-title{
+      color: black;
+      z-index: 1;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      font-weight: 400;
+      width: 50%;
+      text-align: center;
+      padding: 0 10px;
+      font-size: 1.8rem;
+    }
+    &-logo--right{
+      bottom:15%;
+      left: 25%;
+      transform: translate(-50%, 0);
+    }
+    &-title--right{
+      right: 50%;
+    }
+    &-title--top{
+      top: 8%;
+    }
+  }
+}
+
+@media(min-width: 600px){
+  .trends{
+    &__trend{
+     height: 200px;
+     &-title{
+      font-size: 2.3rem;
+    }
+    &-logo{
+      width: 15%;
+    }
+    }
+
+}
+}
+
+@media(min-width: 768px){
+  .trends{
+    &__trend{
+    &-logo{
+      // width: 20%;
+      right: 17%;
+    }
+  }
+    }
+
+}
+
+
+
+@media (min-width:640px) and (orientation: landscape){
+  .trends{
+  &__trend{
+    height: 150px;
+    flex-basis: 80%;
+    margin: 20px auto;
+    &-logo{
+      right: 17%;
+      width: 13%;
+    }
+    &-title{
+      top: 10%;
+      font-size: 2rem;
+    }
+  }
+}
+}
+
+@media (min-width: 960px) and (orientation:landscape){
+  .trends{
+    &__trend{
+      height: 180px;
+      &-logo{
+        right: 18%;
+      }
+      &-title{
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+
+
+
+/*********** DESKTOP *************/
+
+
+@media (min-width: 1200px){
+  .trends{  
+    // padding: 0 20px;
+    &__trend{
+      height: $trend-height-desktop;
+      flex-basis: 80%;
+      background-color: rgb(204, 204, 204);
+      &-image{
+        &--mobile{
+          display: none;
+        }
+        &--desktop{
+          display: inline-block;
+          width: 50%;
+          &-right{
+            left:50%;
+          }
+        }
+      }
+      &-title{
+        font-weight: 400;
+        font-size: 2.3rem;
+      }
+      &-logo{
+        width: 10%;
+        right: 20%;
+      }
+    }
+  }
+}
+
+@media(min-width: 1300px){
+  .trends{
+    padding: 0 20px;
+    justify-content: space-between;
+    &__trend{
+      flex-basis: 40%;
+      margin: 20px 0;
+      &-logo{
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media(min-width: 1600px){
+  .trends{
+    padding: 0;
+}
+}

@@ -1,0 +1,18 @@
+html{
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media(min-width: 1600px){
+.container-trends-activity{
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+}
