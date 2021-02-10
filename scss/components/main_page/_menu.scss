@@ -75,11 +75,18 @@
   .menu-desktop{
     display: flex;
     flex-basis: 100%;
-    padding: 20px;
+    max-width: 1000px;
+    // padding: 20px;
+    // height: 84px;
+    // border: 2px solid #333;
+    // border-radius: 50%;
+    // background: #333;
+    margin: 40px auto;
     &__list{
+      // padding: 20px;
       flex-basis: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       &-item{
         flex-basis: 15%;
         list-style: none;
@@ -87,15 +94,34 @@
       }
     }
     &__item{
-      display: block;
-      height: 42px;
-      font-size: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      transition: .15s .15s;
+      display: flex;
+      height:  80px;
+      // line-height: 64px;
+      font-size: 1.8rem;
       padding: 10px;
       color: black;
-      background-color:  rgb(204, 204, 204);
+      // background-color:  rgb(204, 204, 204);
       text-align: center;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
-      border: 1px solid black;
+      // border-bottom: 2px solid rgb(237,186,0);
+      &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 3px;
+            background-color: rgb(237,186,0);
+            transition: .7s cubic-bezier(0, 1.8, 1, 1);
+      }
+      &:hover::before{
+        right: 0;
+      }
     }
   }
 }
@@ -103,7 +129,7 @@
 @media(min-width: 1300px){
   .menu-desktop{
     &__item{
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 }
@@ -111,7 +137,7 @@
 @media(min-width: 1400px){
   .menu-desktop{
     &__item{
-      font-size: 1.6rem;
+      font-size: 2.2rem;
     }
   }
 }

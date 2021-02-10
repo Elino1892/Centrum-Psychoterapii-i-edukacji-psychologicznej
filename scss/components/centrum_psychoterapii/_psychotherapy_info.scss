@@ -1,0 +1,95 @@
+.psychotherapy-info{
+  background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text{
+    font-size: 1.8rem;
+    padding: 20px;
+    text-align: center;
+    line-height: 35px;
+  }
+}
+
+@media(orientation: portrait) and (min-width: 360px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2rem;
+    }
+  }
+}
+
+@media(orientation: portrait) and (min-width: 410px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.2rem;
+      line-height: 45px;
+    }
+  }
+}
+
+@media(orientation: portrait) and (min-width: 480px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media(orientation: portrait) and (min-width: 600px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.6rem;
+      line-height: 55px;
+    }
+  }
+}
+
+@media(orientation: portrait) and (min-width: 768px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media(orientation: landscape){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2rem;
+      line-height: 40px;
+    }
+    height: 100vh;
+  }
+}
+
+@media(orientation: landscape) and (min-width: 811px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.3rem;
+      line-height: 50px;
+    }
+  }
+}
+
+
+@media(orientation: landscape) and (min-width: 960px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.5rem;
+      line-height: 60px;
+    }
+  }
+}
+
+@media(orientation: landscape) and (min-width: 1024px){
+  .psychotherapy-info{
+    &__text{
+      font-size: 2.7rem;
+    }
+  }
+}

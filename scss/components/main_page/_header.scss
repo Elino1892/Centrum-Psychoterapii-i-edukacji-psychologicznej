@@ -1,22 +1,81 @@
 .banner{
-  display: block;
+  display: flex;
   height: $header-height-mobile;
   position: relative;
   overflow: hidden;
+
+  &-main-page{
+    background-image: url("../../../images/main_page/baner_main.JPG");
+  }
+  &-cent-psych{
+    background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
+    height: $header-height-mobile+100px;
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // transform: scale(1.6);
+  // transform: translate(-);
+  align-items: center;
+
   width: 100%;
-  &__image{
-    transform: translate(0,30%) scale(1.6);
-    width: 100%;
+  // &__image{
+    // transform: translate(0,30%) scale(1.6);
+    // width: 100%;
     // height: 100%;
+  // }
+
+  &__border{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border: 10px solid;
+    border-image-source:  linear-gradient(90deg, rgba(250,188,0,1) 7%, rgba(255,255,255,1) 32%, rgba(252,185,0,1) 51%, rgba(255,255,0,1) 69%, rgba(255,217,0,1) 100%);
+    border-image-slice: 1;
   }
 
+  &__logo-image{
+    // display: flex;
+    // justify-content: center;
+      // width: auto;
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%,50%);
+      width: 21%;
+    }
+  
+    
+  
+    &__main{
+      
+      margin: 10px;
+      background-color: rgb(77,74,71);
+      padding: 10px;
+      border: 1px solid white;
+      color: rgb(237,186,0);
+    }
+    &__title{
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 400;
+    text-transform: uppercase;
+    &-cent-psych{
+      padding: 10px;
+      margin: 10px 20px;
+      background-color: rgba(255,255,255,0.5);
+      font-size: 1.2rem;
+      text-transform: none;
+      line-height: 25px;
+    }
+    }
 
   &__fas{
     // justify-self: flex-end;
     position: absolute;
     transform: translate(0,-50%);
     font-size: 4.5rem;
-    top: $header-height-mobile/2;
+    top: 15%;
     z-index: 100;
   }
   &__fas-bar{
@@ -50,6 +109,8 @@
 //   }
 // }
 
+
+
 @media (min-height: 640px){
   .banner{
     &__image{
@@ -59,33 +120,144 @@
   }
 }
 
-@media (min-width: 450px){
+@media (min-width: 360px){
+  .banner{
+      &__logo-image{
+      transform: translate(-50%,25%);
+          width: 19%;
+        }
+    }
+}
+
+@media (min-width: 410px){
   .banner{
       height: $header-height-mobile+60px;
+      &__logo-image{
+        transform: translate(-50%,19%);
+          width: 18%;
+        }
+    }
+}
+
+@media (min-width: 480px){
+  .banner{
+      &__logo-image{
+        transform: translate(-50%,10%);
+          width: 16%;
+        }
+    }
+}
+
+@media (min-width: 533px){
+  .banner{
+      &__logo-image{
+        transform: translate(-50%,0);
+        }
     }
 }
 
 @media (min-width: 600px){
   .banner{
       height: $header-height-mobile+100px;
+      &__logo-image{
+        transform: translate(-50%,2%);
+          width: 15%;
+        }
+        &__title{
+          font-size: 1.9rem;
+        }
+    }
+}
+
+@media (min-width: 640px){
+  .banner{
+
+      &__logo-image{
+        transform: translate(-50%,10%);
+          width: 13%;
+        }
+    }
+}
+
+@media (min-width: 720px){
+  .banner{
+      &__logo-image{
+        transform: translate(-50%,5%);
+          width: 12%;
+        }
     }
 }
 
 @media (min-width: 768px){
   .banner{
       height: $header-height-mobile+150px;
+      &__main{
+        margin: 15px;
+        padding: 20px;
+      }
+      &__logo-image{
+        transform: translate(-50%,25%);
+          width: 13%;
+        }
+    }
+}
+
+@media (min-width: 768px){
+  .banner{
+      &__logo-image{
+        transform: translate(-50%,15%);
+        }
     }
 }
 
 @media (min-width: 900px){
   .banner{
-      height: auto;
-    
-    &__image{
-      transform: translate(0,0) scale(1);
-    }
+    height: $header-height-mobile+250px;
+    &__logo-image{
+      width: 13%;
+      }
+      &__title{
+        font-size: 2.3rem;
   }
 }
+}
+
+@media (min-width: 1000px){
+  .banner{
+    &__logo-image{
+      // transform: translate(-50%,10%);
+        width: 12%;
+      }
+      &__title{
+        font-size: 2.3rem;
+      }
+  }
+  
+}
+
+@media (min-width: 1100px){
+  .banner{
+    &__logo-image{
+      // transform: translate(-50%,10%);
+        width: 10%;
+      }
+      &__title{
+        font-size: 2.3rem;
+      }
+  }
+  
+}
+
+
+
+
+
+@media (orientation: landscape) and (max-width:1200px){
+  .banner{
+    height: 100vh;
+  }
+}
+
 
 // @media (min-width: 480px) and (orientation:landscape){
 //   .banner{
@@ -121,14 +293,18 @@
 
 @media(min-width: 1200px){
   .banner{
-    height: auto;
+    height: 500px;
     &__fas{
       display: none;
     }
     &__image{
-      transform: translate(0,0) scale(1);
+      // transform: translate(0,0) scale(1);
       // height: 100%;
     }
+    &__logo-image{
+      // transform: translate(-50%,10%);
+        width: 90px;
+      }
   }
 }
 

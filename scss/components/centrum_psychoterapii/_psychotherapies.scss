@@ -1,0 +1,170 @@
+.psychotherapies{
+  // padding-bottom: 10px;
+  .psychotherapy{
+    // margin-bottom: 30px;
+    padding-bottom: 10px;
+    &:nth-last-of-type(1){
+      padding-bottom: 20px;
+    }
+    &--bgc-gray{
+      background-color: rgb(222,222,222);
+      z-index: 1;
+      position: relative;
+    }
+    &__title{
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+    &__description{
+      text-align: justify;
+      padding: 0 10px 10px;
+      font-size: 1.2rem;
+      &--read-more{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        transition: .3s;
+        &-cont{
+          text-align: right;  
+          margin: 10px;
+        }
+        &:hover{
+          color:blue;
+          text-decoration: underline;
+        }
+      }
+    }
+    &__image{
+      margin-top: 10px;
+      width: 100%;
+    }
+    &__make-visit{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(43,31,79);
+      color: #fff;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      margin: 15px auto 5px; ////
+      border-radius: 5px;
+      width: 60%;  ////
+      position: relative;
+      &::after{
+        position: absolute;
+        content: "";
+        top: calc(-1 * 5px);
+        left: calc(-1 * 5px);
+        z-index: -4;
+        width: calc(100% + 5px * 2);
+        height: calc(100% + 5px * 2);
+        background: linear-gradient(
+      60deg,
+      rgba(250,188,0,1) 7%,
+      rgba(255,255,255,1) 32%,
+      rgba(252,185,0,1) 51%,
+      rgb(255, 251, 0) 69%,
+      rgba(255,217,0,1) 100%
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * 5px);
+    animation: moveGradient 4s linear infinite;
+
+      }
+  }
+}
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@media (min-width: 360px){
+  .psychotherapies{
+    .psychotherapy{
+      &__title{
+        padding: 15px;
+        font-size: 1.9rem;
+      }
+      &__description{
+        padding: 0 10px;
+        font-size: 1.4rem;
+      }
+      &__make-visit{
+        font-size: 1.9rem;
+        padding: 15px;
+      }
+  }
+  }
+}
+
+@media (min-width: 480px){
+  .psychotherapies{
+    .psychotherapy{
+      &__title{
+        font-size: 2.1rem;
+      }
+      &__description{
+        font-size: 1.5rem;
+      }
+  }
+  }
+}
+
+@media (min-width: 600px){
+  .psychotherapies{
+    .psychotherapy{
+      &:nth-last-of-type(1){
+        padding-bottom: 30px;
+      }
+      &__title{
+        font-size: 2.5rem;
+      }
+      &__description{
+        font-size: 1.7rem;
+        padding: 0 15px 10px;
+      }
+  }
+  }
+}
+
+@media (min-width: 600px){
+  .psychotherapies{
+    display: flex;
+    flex-wrap: wrap;
+    .psychotherapy{
+      display: flex;
+      flex-wrap: wrap;
+      // height: 100vh;
+      padding: 20px;
+      &__image{
+        // width: 50%;
+      }
+      &__text{
+        flex-basis: 60%;
+        padding: 0 20px;
+        font-size: 1.7rem;
+      }
+      &__image-make-visit{
+        flex-basis: 40%;
+        &--left{
+          order:-1;
+        }
+      }
+      &__description{
+        flex-basis: 50%;
+      }
+  }
+  }
+}
+

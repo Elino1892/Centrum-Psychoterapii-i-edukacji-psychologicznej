@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -17,14 +17,6 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media (min-width: 1600px) {
-  .container-trends-activity {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
 }
 
 .menu-desktop {
@@ -121,7 +113,8 @@ html {
     display: flex;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
   }
   .menu-desktop__list {
     -ms-flex-preferred-size: 100%;
@@ -129,8 +122,9 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .menu-desktop__list-item {
     -ms-flex-preferred-size: 15%;
@@ -138,42 +132,119 @@ html {
     list-style: none;
   }
   .menu-desktop__item {
-    display: block;
-    height: 42px;
-    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: .15s .15s;
+    transition: .15s .15s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+    font-size: 1.8rem;
     padding: 10px;
     color: black;
-    background-color: #cccccc;
     text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-decoration: none;
-    border: 1px solid black;
+  }
+  .menu-desktop__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: #edba00;
+    -webkit-transition: 0.7s cubic-bezier(0, 1.8, 1, 1);
+    transition: 0.7s cubic-bezier(0, 1.8, 1, 1);
+  }
+  .menu-desktop__item:hover::before {
+    right: 0;
   }
 }
 
 @media (min-width: 1300px) {
   .menu-desktop__item {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 1400px) {
   .menu-desktop__item {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 }
 
 .banner {
-  display: block;
-  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 250px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
-.banner__image {
-  -webkit-transform: translate(0, 30%) scale(1.6);
-          transform: translate(0, 30%) scale(1.6);
-  width: 100%;
+.banner-main-page {
+  background-image: url("../../../images/main_page/baner_main.JPG");
+}
+
+.banner-cent-psych {
+  background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
+  height: 350px;
+}
+
+.banner__border {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  border: 10px solid;
+  border-image-source: linear-gradient(90deg, #fabc00 7%, white 32%, #fcb900 51%, yellow 69%, #ffd900 100%);
+  border-image-slice: 1;
+}
+
+.banner__logo-image {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  width: 21%;
+}
+
+.banner__main {
+  margin: 10px;
+  background-color: #4d4a47;
+  padding: 10px;
+  border: 1px solid white;
+  color: #edba00;
+}
+
+.banner__title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.banner__title-cent-psych {
+  padding: 10px;
+  margin: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  text-transform: none;
+  line-height: 25px;
 }
 
 .banner__fas {
@@ -181,7 +252,7 @@ html {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   font-size: 4.5rem;
-  top: 75px;
+  top: 15%;
   z-index: 100;
 }
 
@@ -212,44 +283,181 @@ html {
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 360px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 25%);
+            transform: translate(-50%, 25%);
+    width: 19%;
+  }
+}
+
+@media (min-width: 410px) {
   .banner {
-    height: 210px;
+    height: 310px;
+  }
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 19%);
+            transform: translate(-50%, 19%);
+    width: 18%;
+  }
+}
+
+@media (min-width: 480px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
+    width: 16%;
+  }
+}
+
+@media (min-width: 533px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
 @media (min-width: 600px) {
   .banner {
-    height: 250px;
+    height: 350px;
+  }
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 2%);
+            transform: translate(-50%, 2%);
+    width: 15%;
+  }
+  .banner__title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
+    width: 13%;
+  }
+}
+
+@media (min-width: 720px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 5%);
+            transform: translate(-50%, 5%);
+    width: 12%;
   }
 }
 
 @media (min-width: 768px) {
   .banner {
-    height: 300px;
+    height: 400px;
+  }
+  .banner__main {
+    margin: 15px;
+    padding: 20px;
+  }
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 25%);
+            transform: translate(-50%, 25%);
+    width: 13%;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner__logo-image {
+    -webkit-transform: translate(-50%, 15%);
+            transform: translate(-50%, 15%);
   }
 }
 
 @media (min-width: 900px) {
   .banner {
-    height: auto;
+    height: 500px;
   }
-  .banner__image {
-    -webkit-transform: translate(0, 0) scale(1);
-            transform: translate(0, 0) scale(1);
+  .banner__logo-image {
+    width: 13%;
+  }
+  .banner__title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .banner__logo-image {
+    width: 12%;
+  }
+  .banner__title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .banner__logo-image {
+    width: 10%;
+  }
+  .banner__title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1200px) {
+  .banner {
+    height: 100vh;
   }
 }
 
 @media (min-width: 1200px) {
   .banner {
-    height: auto;
+    height: 500px;
   }
   .banner__fas {
     display: none;
   }
-  .banner__image {
-    -webkit-transform: translate(0, 0) scale(1);
-            transform: translate(0, 0) scale(1);
+  .banner__logo-image {
+    width: 90px;
+  }
+}
+
+.quotation {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 20px;
+}
+
+.quotation__example {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 400;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .quotation__example {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .quotation__example {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .quotation__example {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .quotation__example {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quotation__example {
+    font-size: 3rem;
   }
 }
 
@@ -261,11 +469,13 @@ html {
       flex-wrap: wrap;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .trends__trend {
   position: relative;
-  border: 2px solid black;
+  border: 2px solid #edba00;
   margin: 20px auto;
   height: 120px;
   -ms-flex-preferred-size: 80%;
@@ -278,11 +488,11 @@ html {
   height: 100%;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
 }
 
-.trends__trend-image--desktop {
-  display: none;
+.trends__trend-image--right {
+  left: 50%;
 }
 
 .trends__trend-logo {
@@ -374,17 +584,6 @@ html {
     height: 200px;
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
-    background-color: #cccccc;
-  }
-  .trends__trend-image--mobile {
-    display: none;
-  }
-  .trends__trend-image--desktop {
-    display: inline-block;
-    width: 50%;
-  }
-  .trends__trend-image--desktop-right {
-    left: 50%;
   }
   .trends__trend-title {
     font-weight: 400;
@@ -399,9 +598,8 @@ html {
 @media (min-width: 1300px) {
   .trends {
     padding: 0 20px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .trends__trend {
     -ms-flex-preferred-size: 40%;
@@ -421,7 +619,7 @@ html {
 
 .activity-info {
   margin-top: 20px;
-  background-image: url("../../../images/background-2-mobile.jpg");
+  background-image: url("../../../images/main_page/background-3.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -519,6 +717,383 @@ html {
   }
   .footer__copyright {
     font-size: 1.3rem;
+  }
+}
+
+.psychotherapies .psychotherapy {
+  padding-bottom: 10px;
+}
+
+.psychotherapies .psychotherapy:nth-last-of-type(1) {
+  padding-bottom: 20px;
+}
+
+.psychotherapies .psychotherapy--bgc-gray {
+  background-color: #dedede;
+  z-index: 1;
+  position: relative;
+}
+
+.psychotherapies .psychotherapy__title {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.psychotherapies .psychotherapy__description {
+  text-align: justify;
+  padding: 0 10px 10px;
+  font-size: 1.2rem;
+}
+
+.psychotherapies .psychotherapy__description--read-more {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.psychotherapies .psychotherapy__description--read-more-cont {
+  text-align: right;
+  margin: 10px;
+}
+
+.psychotherapies .psychotherapy__description--read-more:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.psychotherapies .psychotherapy__image {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.psychotherapies .psychotherapy__make-visit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2b1f4f;
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px auto 5px;
+  border-radius: 5px;
+  width: 60%;
+  position: relative;
+}
+
+.psychotherapies .psychotherapy__make-visit::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * 5px);
+  left: calc(-1 * 5px);
+  z-index: -4;
+  width: calc(100% + 5px * 2);
+  height: calc(100% + 5px * 2);
+  background: linear-gradient(60deg, #fabc00 7%, white 32%, #fcb900 51%, #fffb00 69%, #ffd900 100%);
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * 5px);
+  -webkit-animation: moveGradient 4s linear infinite;
+          animation: moveGradient 4s linear infinite;
+}
+
+@-webkit-keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (min-width: 360px) {
+  .psychotherapies .psychotherapy__title {
+    padding: 15px;
+    font-size: 1.9rem;
+  }
+  .psychotherapies .psychotherapy__description {
+    padding: 0 10px;
+    font-size: 1.4rem;
+  }
+  .psychotherapies .psychotherapy__make-visit {
+    font-size: 1.9rem;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 480px) {
+  .psychotherapies .psychotherapy__title {
+    font-size: 2.1rem;
+  }
+  .psychotherapies .psychotherapy__description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .psychotherapies .psychotherapy:nth-last-of-type(1) {
+    padding-bottom: 30px;
+  }
+  .psychotherapies .psychotherapy__title {
+    font-size: 2.5rem;
+  }
+  .psychotherapies .psychotherapy__description {
+    font-size: 1.7rem;
+    padding: 0 15px 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .psychotherapies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .psychotherapies .psychotherapy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px;
+  }
+  .psychotherapies .psychotherapy__text {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    padding: 0 20px;
+    font-size: 1.7rem;
+  }
+  .psychotherapies .psychotherapy__image-make-visit {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .psychotherapies .psychotherapy__image-make-visit--left {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .psychotherapies .psychotherapy__description {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+.banner-cent-psych {
+  background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
+  height: 70vh;
+}
+
+.banner__title-cent-psych {
+  padding: 10px;
+  margin: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3rem;
+  text-transform: none;
+  line-height: 23px;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    font-size: 1.7rem;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 480px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 600px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    font-size: 2.3rem;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    line-height: 55px;
+  }
+}
+
+@media (min-width: 800px) and (orientation: portrait) {
+  .banner__title-cent-psych {
+    line-height: 65px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1200px) {
+  .banner-cent-psych {
+    height: 100vh;
+  }
+  .banner__title-cent-psych {
+    width: 70%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 480px) {
+  .banner__title-cent-psych {
+    font-size: 1.6rem;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 600px) {
+  .banner__title-cent-psych {
+    font-size: 1.7rem;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 720px) {
+  .banner__title-cent-psych {
+    font-size: 1.9rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 811px) {
+  .banner__title-cent-psych {
+    line-height: 50px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 960px) {
+  .banner__title-cent-psych {
+    font-size: 2.3rem;
+    line-height: 60px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner__title-cent-psych {
+    line-height: 70px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner__title-cent-psych {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .banner__title-cent-psych {
+    font-size: 2.7rem;
+  }
+}
+
+.psychotherapy-info {
+  background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.psychotherapy-info__text {
+  font-size: 1.8rem;
+  padding: 20px;
+  text-align: center;
+  line-height: 35px;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+  .psychotherapy-info__text {
+    font-size: 2rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+  .psychotherapy-info__text {
+    font-size: 2.2rem;
+    line-height: 45px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 480px) {
+  .psychotherapy-info__text {
+    font-size: 2.4rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 600px) {
+  .psychotherapy-info__text {
+    font-size: 2.6rem;
+    line-height: 55px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .psychotherapy-info__text {
+    font-size: 2.8rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .psychotherapy-info {
+    height: 100vh;
+  }
+  .psychotherapy-info__text {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 811px) {
+  .psychotherapy-info__text {
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 960px) {
+  .psychotherapy-info__text {
+    font-size: 2.5rem;
+    line-height: 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .psychotherapy-info__text {
+    font-size: 2.7rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
