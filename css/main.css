@@ -197,7 +197,7 @@ html {
 }
 
 .banner-main-page {
-  background-image: url("../../../images/main_page/baner_main.JPG");
+  background-image: url("../../../images/main_page/baner_main.jpg");
 }
 
 .banner-cent-psych {
@@ -879,7 +879,6 @@ html {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
     padding: 0 20px;
-    font-size: 1.7rem;
   }
   .psychotherapies .psychotherapy__image-make-visit {
     -ms-flex-preferred-size: 40%;
