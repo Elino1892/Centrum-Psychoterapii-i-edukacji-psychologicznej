@@ -5,7 +5,9 @@
   max-width: 1920px;
   margin: 0 auto;
   &__trend{
-    
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     // position: relative;
     // border: 2px solid rgb(237,186,0);
     // margin: 20px auto;
@@ -60,7 +62,7 @@
       flex-basis: 100%;
       font-weight: 400;
       // width: 50%;
-      
+      // line-height: 50vh;
       text-align: center;
       padding: 5px;
       font-size: 2rem;
@@ -83,7 +85,11 @@
   .trends{
     &__trend{
       height: 30vh;
+      // &-title{
+      //   line-height: 30vh;
+      // }
     }
+
   }
 }
 
@@ -92,6 +98,9 @@
     &__trend{
       height: 30vh;
       flex-basis: 50%;
+      // &-title{
+      //   line-height: 30vh;
+      // }
     }
   }
 }
@@ -99,6 +108,9 @@
 
 @media(min-width:533px) and (orientation: landscape){
   .trends{
+    // &-title{
+    //   line-height: 60vh;
+    // }
     &__trend{
       height: 60vh;
     }
@@ -131,7 +143,7 @@
       }
       
       &-title{
-        line-height: 50vh;
+        line-height: 30vh;
         
         padding: 0;
         opacity: 0;
@@ -157,6 +169,9 @@
   .trends{
     &__trend{
       height: 37vh;
+      &-title{
+        line-height: 37vh;
+      }
   }
 }
 }
@@ -165,6 +180,9 @@
   .trends{
     &__trend{
       height: 45vh;
+      &-title{
+        line-height: 45vh;
+      }
   }
 }
 }

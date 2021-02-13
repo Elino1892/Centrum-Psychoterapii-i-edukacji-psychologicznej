@@ -640,7 +640,7 @@ html {
     background-size: 150%;
   }
   .trends__trend-title {
-    line-height: 50vh;
+    line-height: 30vh;
     padding: 0;
     opacity: 0;
     -webkit-transition: 1s;
@@ -655,11 +655,17 @@ html {
   .trends__trend {
     height: 37vh;
   }
+  .trends__trend-title {
+    line-height: 37vh;
+  }
 }
 
 @media (min-width: 1555px) {
   .trends__trend {
     height: 45vh;
+  }
+  .trends__trend-title {
+    line-height: 45vh;
   }
 }
 
