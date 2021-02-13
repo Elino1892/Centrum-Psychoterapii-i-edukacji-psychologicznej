@@ -1,13 +1,31 @@
 .activity-info{
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 20px;
   background-image: url("../../../images/main_page/background-3.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
+ 
+  min-height: 100vh;
   &__text{
+    line-height: 30px;
     padding: 20px;
     font-size: 1.5rem;
     text-align:center;
+  }
+}
+
+
+@media(min-width: 411px){
+  .activity-info{
+    &__text{  
+      padding: 30px 20px;
+      line-height: 40px;
+      font-size: 1.7rem;
+    }
   }
 }
 
@@ -16,9 +34,29 @@
     &__text{
       padding: 30px;
       font-size: 2rem;
+      line-height: 50px;
     }
   }
 }
+
+@media(min-width: 768px){
+  .activity-info{
+    &__text{
+      font-size: 2.2rem;
+      line-height: 60px;
+    }
+  }
+}
+
+@media(min-width: 800px){
+  .activity-info{
+    &__text{
+      line-height: 65px;
+    }
+  }
+}
+
+
 
 @media (orientation: landscape){
   .activity-info{
@@ -34,6 +72,33 @@
     &__text{
       padding: 40px;
       font-size: 2.5rem;
+    }
+  }
+}
+
+@media(min-width: 1200px){
+  .activity-info{
+    &__text{
+      font-size: 2.5rem;
+      line-height: 75px;
+    }
+  }
+}
+
+@media(min-width: 1400px){
+  .activity-info{
+    &__text{
+      font-size: 2.7rem;
+      // line-height: 75px;
+    }
+  }
+}
+
+@media(min-width: 1700px){
+  .activity-info{
+    &__text{
+      line-height: 100px;
+      font-size: 3rem;
     }
   }
 }

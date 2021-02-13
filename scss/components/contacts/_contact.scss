@@ -1,0 +1,38 @@
+.contact{
+  display: flex;
+  // flex-wrap: wrap;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  &__phone{
+    // position: relative;
+    display: flex;
+    flex-basis: 100%;
+    
+    justify-content: flex-end;
+    align-items: center;
+    // &--num{
+    //   font-size: 1.5rem;
+    //   text-transform: uppercase;
+    //   font-weight: 800;
+    //   color: rgb(0, 24, 242);
+    //   flex-basis: 40%;
+    //   text-align: center;
+    // }
+  }
+}
+
+@media(min-width:600px){
+  .contact{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media(min-width:1024px){
+  .contact{
+    display: none;
+  }
+}

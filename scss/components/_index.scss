@@ -8,6 +8,12 @@ html{
   flex-wrap: wrap;
 }
 
+@media(max-width:1200px){
+  .wrapper{
+    justify-content: space-between;
+  }
+}
+
 
 // @media(min-width: 1600px){
 // .container-trends-activity{

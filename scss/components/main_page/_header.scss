@@ -1,7 +1,7 @@
 .banner{
   display: flex;
   height: $header-height-mobile;
-  position: relative;
+  // position: relative;
   overflow: hidden;
 
   &-main-page{
@@ -70,34 +70,7 @@
     }
     }
 
-  &__fas{
-    // justify-self: flex-end;
-    position: absolute;
-    transform: translate(0,-50%);
-    font-size: 4.5rem;
-    top: 15%;
-    z-index: 100;
-  }
-  &__fas-bar{
-    display: none;
-    right: 50px;
-    
-    color: black;
-  }
-
-  &__fas-bar--active{
-    display: block;
-  }
-
-  &__fas-times{
-    display: none;
-    right: 54px;
-    color: white;
-  }
-
-  &__fas-times--active{
-    display: block;
-  }
+  
 }
 
 // .quotation{
@@ -294,9 +267,7 @@
 @media(min-width: 1200px){
   .banner{
     height: 500px;
-    &__fas{
-      display: none;
-    }
+    
     &__image{
       // transform: translate(0,0) scale(1);
       // height: 100%;

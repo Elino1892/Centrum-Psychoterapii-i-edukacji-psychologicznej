@@ -6,13 +6,16 @@
   <title>Centrum Psychoterapii</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/087f198222.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
+
+
     <nav class="menu-mobile">
       <ul class="menu-mobile__list">
         <li class="menu-mobile__list-item"><a href="../pages/index.html" class="menu-mobile__item">Strona główna</a></li>
-        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Centrum psychoterapii</a></li>
+        <li class="menu-mobile__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-mobile__item">Centrum psychoterapii</a></li>
         <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Centrum edukacyjne</a></li>
         <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Coaching</a></li>
         <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Mediacje</a></li>
@@ -20,10 +23,24 @@
         <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Kontakt</a></li>
       </ul>
     </nav>
+
+
+
+    <a href="../pages/index.html" class="logo"><img src="../images/LOGO.png" class="logo__image">
+      <p class="logo__title">Centrum Psychoterapii i Edukacji Psychologicznej</p>
+      </a>
+      <div class="burger"> <div class="burger__fas burger__fas-bar burger__fas-bar--active"><i class="fas fa-bars"></i></div> 
+      <div class="burger__fas burger__fas-times burger__fas-times"><i class="fas fa-times"></i></div></div>
+
+      <section class="contacts-header">
+        <div class="contacts-header__item"><i class="fas fa-mobile-alt contacts-header__item-image--num"></i><span class="contacts-header__item-text">123456789</span></div>
+        <div class="contacts-header__item"><i class="far fa-envelope contacts-header__item-image--mail"></i><span class="contacts-header__item-text">mail@mail.com</span></div>
+      </section>
+
     <nav class="menu-desktop">
       <ul class="menu-desktop__list">
         <li class="menu-desktop__list-item"><a href="../pages/index.html" class="menu-desktop__item">Strona główna</a></li>
-        <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Centrum psychoterapii</a></li>
+        <li class="menu-desktop__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-desktop__item">Centrum psychoterapii</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Centrum edukacyjne</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Coaching</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Mediacje</a></li>
@@ -31,14 +48,18 @@
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Kontakt</a></li>
       </ul>
     </nav>
+
+
+
     <header class="banner banner-cent-psych">
-      <div class="banner__fas banner__fas-bar banner__fas-bar--active"><i class="fas fa-bars"></i></div> 
-      <div class="banner__fas banner__fas-times banner__fas-times"><i class="fas fa-times"></i></div>
-        <h1 class="banner__title banner__title-cent-psych">Zapraszamy na sesje do naszego Centrum, jeśli poszukujesz równowagi w życiu osobistym i zawodowym, chcesz poznać narzędzia pomocne w realizacji celów, pragniesz zaplanować przyszłość zawodowoą lub zainicjować i wprowadzić istotne zmiany.</h1>
+        <h1 class="banner__title banner__title-cent-psych">Jeśli poszukujesz równowagi w życiu osobistym i zawodowym,<br>Chcesz poznać narzędzia pomocne w realizacji celów. <br>Pragniesz zaplanować przyszłość zawodowoą lub zainicjować i wprowadzić istotne zmiany. <br> Zapraszamy na sesje do naszego Centrum.
+        </h1>
     </header>
 
-  <section class="psychotherapies">
 
+
+
+  <section class="psychotherapies">
 
 
  <div class="psychotherapy">
@@ -76,7 +97,7 @@
  <div class="psychotherapy">
   <div class="psychotherapy__text">
    <h1 class="psychotherapy__title">Psychoterapia dzieci i młodzieży</h1>
-   <p class="psychotherapy__description">W naszym Centrum prowadzimy grupy dla dzieci i młodzieży ukierunkowane na zaspokojenie potrzeb i radzenie sobie z trudnościami specyficznymi dla określonego wieku.Prowadzimy również konsultacje dla rodziców ukierunkowane na wzmocnienie dziecka i budowanie jego potencjału.
+   <p class="psychotherapy__description">W naszym Centrum prowadzimy grupy dla dzieci i młodzieży ukierunkowane na zaspokojenie potrzeb i radzenie sobie z trudnościami specyficznymi dla określonego wieku. Prowadzimy również konsultacje dla rodziców ukierunkowane na wzmocnienie dziecka i budowanie jego potencjału.
     </p>
     <p class="psychotherapy__description psychotherapy__description--read-more-cont"><a href="#" class="psychotherapy__description psychotherapy__description--read-more">Czytaj dalej...</a></p>
   </div>
@@ -105,7 +126,17 @@
   </section>
 
 
-
+<div class="contact">
+    <div class="contact__phone">
+  <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+    <div class="phonering-alo-ph-circle"></div>
+     <div class="phonering-alo-ph-circle-fill"></div>
+    <a href="tel:+123456789" class="pps-btn-img">
+     <div class="phonering-alo-ph-img-circle"></div>
+     </a>
+    </div>
+  </div>
+  </div>
 
   <section class="psychotherapy-info">
       <p class="psychotherapy-info__text">
@@ -126,5 +157,6 @@
   </div>
   <script src="../script/menu.js"></script>
   <script src="../script/date.js"></script>
+  <script src="../script/menu_active.js"></script>
 </body>
 </html>

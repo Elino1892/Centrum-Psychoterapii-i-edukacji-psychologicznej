@@ -19,9 +19,10 @@
       font-size: 1.7rem;
     }
     &__description{
+      line-height: 25px;
       text-align: justify;
       padding: 0 10px 10px;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       &--read-more{
         display: inline-block;
         color: black;
@@ -115,6 +116,7 @@
         font-size: 2.1rem;
       }
       &__description{
+        line-height: 35px;
         font-size: 1.5rem;
       }
   }
@@ -131,6 +133,7 @@
         font-size: 2.5rem;
       }
       &__description{
+        line-height: 45px;
         font-size: 1.7rem;
         padding: 0 15px 10px;
       }
@@ -138,13 +141,15 @@
   }
 }
 
-@media (min-width: 600px){
+@media (min-width: 1200px){
   .psychotherapies{
     display: flex;
     flex-wrap: wrap;
     .psychotherapy{
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       // height: 100vh;
       padding: 20px;
       &__image{
@@ -168,3 +173,44 @@
   }
 }
 
+@media (min-width: 1400px){
+  .psychotherapies{
+    .psychotherapy{
+      &__title{
+        font-size: 2.7rem;
+      }
+      &__description{
+        line-height: 55px;
+        font-size: 2rem;
+      }
+  }
+  }
+}
+
+@media (min-width: 1600px){
+  .psychotherapies{
+    .psychotherapy{
+      &__title{
+        font-size: 2.9rem;
+      }
+      &__description{
+        line-height: 65px;
+        font-size: 2.2rem;
+      }
+  }
+  }
+}
+
+@media (min-width: 1800px){
+  .psychotherapies{
+    .psychotherapy{
+      &__title{
+        font-size: 3.1rem;
+      }
+      &__description{
+        line-height: 75px;
+        font-size: 2.4rem;
+      }
+  }
+  }
+}
