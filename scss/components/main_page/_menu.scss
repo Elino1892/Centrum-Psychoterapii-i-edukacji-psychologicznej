@@ -70,10 +70,13 @@
     display: none;
     // right: 54px;
     color: white;
+    cursor: pointer;
+    opacity: 0;
   }
 
   &__fas-times--active{
     display: block;
+    animation:show-x 1s 1s forwards
   }
 }
 
@@ -90,15 +93,21 @@
 }
 
 .menu-mobile{
-  height: 500px;
-  width: 100%;
   position: absolute;
-  top: -150%;
-  left: 0;
-  padding: 20px;
-  background-color: black;
-  transition: .2s;
+  // height: calc(100vh - 7rem);
+  width: 100%;
+  
+  // top: -150%;
+  // left: 0;
+  padding: 20px 5px;
+  background-color: rgb(28,28,28);
+  // transition: .2s;
   z-index: 100;
+  transform:scaleX(0);
+  transform-origin:right;
+  display:none;
+  // animation:slide-menu 1s ease-in forwards;
+
   &__list{
     display: flex;
     width: 70%;
@@ -106,12 +115,35 @@
     align-items: center;
     height: 100%;
     &-item{
+      padding: 20px 0;
       display: flex;
       // justify-content: center;
       margin-left: 10px;
       align-items: center;
       flex-basis: 90%;
       list-style: none;
+      opacity: 0;
+      &:nth-of-type(1){
+        animation:menu-item-anim .6s forwards 1s ease-in-out;
+      }
+      &:nth-of-type(2) {
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+      }
+      &:nth-of-type(3) {
+        animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+      }
+      &:nth-of-type(4) {
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+      }
+      &:nth-of-type(5) {
+        animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+      }
+      &:nth-of-type(6) {
+        animation: menu-item-anim .6s forwards 2s ease-in-out;
+      }
+       &:nth-of-type(7) {
+         animation: menu-item-anim .6s forwards 2.2s ease-in-out;
+       }
     }
   }
   &__item{
@@ -120,38 +152,143 @@
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
-    text-align: center;
-    border: 2px solid white;
-    padding: 10px;
+    // text-align: center;
+    // border-bottom: 2px solid white;
+    
+    padding: 10px 5px;
     transition: .3s;
+    
     &:hover{
-      background-color: white;
-      color: black
+      color: rgb(76,175,80);
     }
   }
-  
-  
+  .current_page {
+    border-bottom: 2px solid #fff;
+  }
+  .fas,.far{
+    text-align: center;
+    width: 30px;
+    margin-right: 5px;
+  }
+
   &--active{
-    top: 0;
+    display:block;
+    animation:slide-menu 1s ease-in forwards;
+
+  }
+  
+}
+
+@keyframes slide-menu {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
   }
 }
 
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    transform: translateY(70%);
+    opacity: 0
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@media (min-width:480px) {
+  .menu-mobile {
+    &__item {
+      flex-basis: 80%;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width:600px) {
+  .menu-mobile {
+    &__item {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .menu-mobile {
+    &__item {
+      flex-basis: 60%;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  .menu-mobile {
+    &__item {
+      flex-basis: 50%;
+    }
+  }
+}
 
 @media (orientation: landscape){
  .menu-mobile{
-   height: 400px;
+  //  height: 400px;
    &__list{
      width: 85%;
-     &-item{
-       justify-content: center;
-     }
    }
    &__item{
-     flex-basis: 85%;
-     font-size: 1.3rem;
+    //  flex-basis: 85%;
+     font-size: 1.5rem;
    }
  }
 }
+
+@media (orientation: landscape) and (min-width:811px){
+  .menu-mobile {
+    &__item {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width:960px) {
+  .menu-mobile {
+    &__item {
+      padding-left: 20px;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width:1024px) {
+  .menu-mobile {
+    &__item {
+      padding-left: 35px;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+
+
+
+
 
 @media(min-width: 1200px){
   .menu-mobile{
@@ -160,7 +297,6 @@
   .burger{
     display: none;
   }
-
 
 
   .menu-desktop{

@@ -3,6 +3,7 @@
   .psychotherapy{
     // margin-bottom: 30px;
     padding-bottom: 10px;
+    transition: 1s;
     &:nth-last-of-type(1){
       padding-bottom: 20px;
     }
@@ -39,8 +40,12 @@
       }
     }
     &__image{
-      margin-top: 10px;
+      
       width: 100%;
+      &-link{
+        margin-top: 10px;
+        display: block;
+      }
     }
     &__make-visit{
       display: flex;
@@ -80,6 +85,17 @@
 
       }
   }
+  &:nth-of-type(1),&:nth-of-type(3){
+    transform: translateX(100vw);
+    
+  }
+  &:nth-of-type(2),&:nth-of-type(4){
+    transform: translateX(-100vw);
+    
+  }
+&__active{
+  transform: translateX(0)!important;
+}
 }
 }
 

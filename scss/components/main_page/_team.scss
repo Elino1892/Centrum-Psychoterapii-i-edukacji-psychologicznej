@@ -1,0 +1,396 @@
+// .team{
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 30px 20px;
+//   // opacity: 0;
+//   // visibility: hidden;
+  
+
+//   &__title{
+//     text-align: center;
+//     font-size: 3rem;
+//     text-transform: uppercase;
+//     padding: 20px 0;
+//   }
+//   &__description{
+//     font-size: 1.3rem;
+//     text-align: center;
+//     margin-bottom: 20px;
+//   }
+//   &__members{
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   &__member{
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-basis: 100%;
+//     margin-bottom: 20px;
+//     justify-content: center;
+//     align-items: center;
+//     &-image{
+//       width: 100%;
+//     }
+//     &-name{
+//       flex-basis: 100%;
+//       text-align: center;
+//       padding: 10px;
+//       text-transform: uppercase;
+//       font-weight: 400;
+//     }
+//     &-profession{
+//       font-size: 1.4rem;
+//       padding: 10px;
+//       flex-basis: 100%;
+//       text-align: center;
+//       color: red;
+//       font-style: italic;
+//     }
+//     &-contact{
+//       font-size: 1.4rem;
+//       padding: 10px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       flex-basis: 100%;
+//       .fa-phone{
+//         transform: rotateY(180deg);
+//         margin-right: 5px;
+//       }
+//     }
+//   }
+
+  
+
+
+// }
+
+// @media (min-width: 411px){
+//   .team{
+//     &__description{
+//       font-size: 1.5rem;
+//     }
+//     &__member{
+//       &-name{
+//        font-size: 1.7rem;
+//       }
+//       &-profession{
+//         font-size: 1.5rem;
+//       }
+//       &-contact{
+//         font-size: 1.5rem;
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 768px){
+//   .team{
+//     &__description{
+//       font-size: 1.6rem;
+//     }
+//     &__member{
+//       flex-basis: 50%;
+//       padding-left: 20px;
+//     }
+//   }
+// }
+
+
+
+.team{
+  flex-basis: 100%;
+  &__title{
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding: 20px 0;
+      }
+      &__description{
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      &__border{
+        width: 50%;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        
+        height: 5px;
+        margin: 15px auto;
+        border-color: #000;
+      }
+  &__members{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ccc;
+  position: relative;
+  &-image{
+    &--color{
+      position: absolute;
+      bottom: 0;
+      right: -5%;
+   height: 36%;
+   z-index: 1;
+   animation: color 4s linear infinite;
+    }
+    &--gray{
+      position: absolute;
+      bottom: 0;
+      left: -70%;
+   height: 110%;
+   opacity: 0.2;
+   animation: gray 4s linear infinite;
+    }
+  }
+  }
+  &__member{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: text 4s linear infinite;
+    &-name{
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+    &-profession{
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    &-contact{
+      font-size: 1.7rem;
+    }
+    .fa-phone{
+     transform: rotateY(180deg);
+      margin-right: 8px;
+     }
+  }
+}
+
+@media(orientation: landscape){
+  .team{
+    &__members{
+    &-image{
+      &--color{
+        right: 3%;
+     height: 53%;
+      }
+      &--gray{
+        bottom: -10%;
+        left: -15%;
+     height: 130%;
+      }
+    }
+    }
+    &__member{
+      left: auto;
+      width: 60%;
+      right: 0;
+    }
+  }
+}
+
+@media(orientation: landscape) and (min-width: 811px){
+  .team{
+    &__members{
+    &-image{
+      &--color{
+     height: 50%;
+      }
+  }
+}
+}
+}
+
+
+
+@media (min-width: 411px){
+  .team{
+    &__description{
+      font-size: 1.5rem;
+    }
+      &__member{
+        &-name{
+          font-size: 3rem;
+        }
+        &-profession{
+          font-size: 2.3rem;
+        }
+        &-contact{
+          font-size: 2rem;
+        }
+      }
+    
+  }
+}
+
+@media (min-width: 600px){
+  .team{
+      &__member{
+        &-name{
+          font-size: 3.5rem;
+        }
+        &-profession{
+          font-size: 2.7rem;
+        }
+        &-contact{
+          font-size: 2.4rem;
+        }
+      }
+    
+  }
+}
+
+@media (min-width: 768px){
+  .team{
+    &__description{
+      font-size: 1.6rem;
+    }
+    &__member{
+      &-name{
+        font-size: 3.8rem;
+      }
+      &-profession{
+        font-size: 3rem;
+      }
+      &-contact{
+        font-size: 2.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .team{
+    &__title{
+      font-size: 4rem;
+    }
+    &__description{
+      font-size: 2rem;
+    }
+    &__member{
+      &-name{
+        font-size: 6rem;
+      }
+      &-profession{
+        font-size: 4rem;
+      }
+      &-contact{
+        font-size: 3.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .team{
+    &__title{
+      font-size: 4.5rem;
+    }
+    &__description{
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@media (min-width: 1600px){
+  .team{
+    &__title{
+      font-size: 4.8rem;
+    }
+    &__description{
+      font-size: 2.6rem;
+    }
+  }
+}
+
+@keyframes color {
+  0% {
+   transform: translateX(0);
+   opacity: 0;
+  }
+
+  8% {
+   opacity: 0;
+  }
+
+  13% {
+   opacity: 1;
+  }
+
+  87% {
+   opacity: 1;
+  }
+
+  92% {
+   opacity: 0
+  }
+
+  100% {
+   transform: translateX(-5%);
+   opacity: 0;
+  }
+ }
+
+ @keyframes gray {
+  0% {
+   transform: translateX(0) scale(1);
+   opacity: 0;
+  }
+
+  8% {
+   opacity: 0;
+  }
+
+  13% {
+   opacity: .2;
+  }
+
+  87% {
+   opacity: .2;
+  }
+
+  92% {
+   opacity: 0
+  }
+
+  100% {
+   transform: translateX(5%) scale(1.1);
+   opacity: 0;
+  }
+ }
+
+ @keyframes text {
+  0% {
+   transform: scale(1);
+   opacity: 0;
+  }
+
+  8% {
+   opacity: 0;
+  }
+
+  13% {
+   opacity: 1;
+  }
+
+  87% {
+   opacity: 1;
+  }
+
+  92% {
+   opacity: 0
+  }
+
+  100% {
+   transform: scale(1.1);
+   opacity: 0;
+  }
+ }

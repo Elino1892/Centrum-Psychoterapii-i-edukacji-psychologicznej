@@ -1,13 +1,13 @@
 .quotation{
   flex-basis: 100%;
-  padding: 40px;
+  padding: 30px;
   &__example{
-    line-height: 40px;
+    line-height: 35px;
     font-size: 1.6rem;
     text-align: center;
     font-weight: 400;
-    width: 70%;
-    margin: 0 auto;
+    // width: 70%;
+    // margin: 0 auto;
   }
 }
 
@@ -43,11 +43,23 @@
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
   .quotation{
+    padding: 40px;
     &__example{
       font-size: 3rem;
+      line-height: 60px;
+    width: 70%;
+    margin: 0 auto;
+    }
+  }
+  .quotation-child{
+    &__example{
+      width: 80%;
+      font-size: 2.6rem;
     }
   }
 }
+
+
 

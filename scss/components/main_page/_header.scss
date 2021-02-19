@@ -266,12 +266,9 @@
 
 @media(min-width: 1200px){
   .banner{
-    height: 500px;
+    height: 50vh;
     
-    &__image{
-      // transform: translate(0,0) scale(1);
-      // height: 100%;
-    }
+
     &__logo-image{
       // transform: translate(-50%,10%);
         width: 90px;

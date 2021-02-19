@@ -17,6 +17,7 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -104,10 +105,14 @@ html {
 .burger__fas-times {
   display: none;
   color: white;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .burger__fas-times--active {
   display: block;
+  -webkit-animation: show-x 1s 1s forwards;
+          animation: show-x 1s 1s forwards;
 }
 
 @media (min-width: 1200px) {
@@ -121,16 +126,16 @@ html {
 }
 
 .menu-mobile {
-  height: 500px;
-  width: 100%;
   position: absolute;
-  top: -150%;
-  left: 0;
-  padding: 20px;
-  background-color: black;
-  -webkit-transition: .2s;
-  transition: .2s;
+  width: 100%;
+  padding: 20px 5px;
+  background-color: #1c1c1c;
   z-index: 100;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  display: none;
 }
 
 .menu-mobile__list {
@@ -147,6 +152,7 @@ html {
 }
 
 .menu-mobile__list-item {
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,6 +163,42 @@ html {
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
   list-style: none;
+  opacity: 0;
+}
+
+.menu-mobile__list-item:nth-of-type(1) {
+  -webkit-animation: menu-item-anim .6s forwards 1s ease-in-out;
+          animation: menu-item-anim .6s forwards 1s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(2) {
+  -webkit-animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(3) {
+  -webkit-animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(4) {
+  -webkit-animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(5) {
+  -webkit-animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+          animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(6) {
+  -webkit-animation: menu-item-anim .6s forwards 2s ease-in-out;
+          animation: menu-item-anim .6s forwards 2s ease-in-out;
+}
+
+.menu-mobile__list-item:nth-of-type(7) {
+  -webkit-animation: menu-item-anim .6s forwards 2.2s ease-in-out;
+          animation: menu-item-anim .6s forwards 2.2s ease-in-out;
 }
 
 .menu-mobile__item {
@@ -166,38 +208,152 @@ html {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  text-align: center;
-  border: 2px solid white;
-  padding: 10px;
+  padding: 10px 5px;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 .menu-mobile__item:hover {
-  background-color: white;
-  color: black;
+  color: #4caf50;
+}
+
+.menu-mobile .current_page {
+  border-bottom: 2px solid #fff;
+}
+
+.menu-mobile .fas, .menu-mobile .far {
+  text-align: center;
+  width: 30px;
+  margin-right: 5px;
 }
 
 .menu-mobile--active {
-  top: 0;
+  display: block;
+  -webkit-animation: slide-menu 1s ease-in forwards;
+          animation: slide-menu 1s ease-in forwards;
+}
+
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 480px) {
+  .menu-mobile__item {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-mobile__item {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-mobile__item {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-mobile__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 @media (orientation: landscape) {
-  .menu-mobile {
-    height: 400px;
-  }
   .menu-mobile__list {
     width: 85%;
   }
-  .menu-mobile__list-item {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .menu-mobile__item {
-    -ms-flex-preferred-size: 85%;
-        flex-basis: 85%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 811px) {
+  .menu-mobile__item {
+    font-size: 1.8rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 960px) {
+  .menu-mobile__item {
+    padding-left: 20px;
+    font-size: 2.2rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .menu-mobile__item {
+    padding-left: 35px;
+    font-size: 2.5rem;
   }
 }
 
@@ -495,7 +651,7 @@ html {
 
 @media (min-width: 1200px) {
   .banner {
-    height: 500px;
+    height: 50vh;
   }
   .banner__logo-image {
     width: 90px;
@@ -505,16 +661,14 @@ html {
 .quotation {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  padding: 40px;
+  padding: 30px;
 }
 
 .quotation__example {
-  line-height: 40px;
+  line-height: 35px;
   font-size: 1.6rem;
   text-align: center;
   font-weight: 400;
-  width: 70%;
-  margin: 0 auto;
 }
 
 @media (min-width: 600px) {
@@ -541,9 +695,19 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+  .quotation {
+    padding: 40px;
+  }
   .quotation__example {
     font-size: 3rem;
+    line-height: 60px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .quotation-child__example {
+    width: 80%;
+    font-size: 2.6rem;
   }
 }
 
@@ -691,13 +855,35 @@ html {
   background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear 500ms;
+  transition: opacity 500ms linear, visibility 0s linear 500ms;
 }
 
 .activity-info__text {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100%;
   line-height: 30px;
   padding: 20px;
   font-size: 1.5rem;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.activity-info__active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear;
+  transition: opacity 500ms linear, visibility 0s linear;
 }
 
 @media (min-width: 411px) {
@@ -763,13 +949,353 @@ html {
   }
 }
 
+.team {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.team__title {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.team__description {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.team__border {
+  width: 50%;
+  border: 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  height: 5px;
+  margin: 15px auto;
+  border-color: #000;
+}
+
+.team__members {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ccc;
+  position: relative;
+}
+
+.team__members-image--color {
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  height: 36%;
+  z-index: 1;
+  -webkit-animation: color 4s linear infinite;
+          animation: color 4s linear infinite;
+}
+
+.team__members-image--gray {
+  position: absolute;
+  bottom: 0;
+  left: -70%;
+  height: 110%;
+  opacity: 0.2;
+  -webkit-animation: gray 4s linear infinite;
+          animation: gray 4s linear infinite;
+}
+
+.team__member {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-animation: text 4s linear infinite;
+          animation: text 4s linear infinite;
+}
+
+.team__member-name {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+
+.team__member-profession {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team__member-contact {
+  font-size: 1.7rem;
+}
+
+.team__member .fa-phone {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  margin-right: 8px;
+}
+
+@media (orientation: landscape) {
+  .team__members-image--color {
+    right: 3%;
+    height: 53%;
+  }
+  .team__members-image--gray {
+    bottom: -10%;
+    left: -15%;
+    height: 130%;
+  }
+  .team__member {
+    left: auto;
+    width: 60%;
+    right: 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 811px) {
+  .team__members-image--color {
+    height: 50%;
+  }
+}
+
+@media (min-width: 411px) {
+  .team__description {
+    font-size: 1.5rem;
+  }
+  .team__member-name {
+    font-size: 3rem;
+  }
+  .team__member-profession {
+    font-size: 2.3rem;
+  }
+  .team__member-contact {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .team__member-name {
+    font-size: 3.5rem;
+  }
+  .team__member-profession {
+    font-size: 2.7rem;
+  }
+  .team__member-contact {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .team__description {
+    font-size: 1.6rem;
+  }
+  .team__member-name {
+    font-size: 3.8rem;
+  }
+  .team__member-profession {
+    font-size: 3rem;
+  }
+  .team__member-contact {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team__title {
+    font-size: 4rem;
+  }
+  .team__description {
+    font-size: 2rem;
+  }
+  .team__member-name {
+    font-size: 6rem;
+  }
+  .team__member-profession {
+    font-size: 4rem;
+  }
+  .team__member-contact {
+    font-size: 3.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team__title {
+    font-size: 4.5rem;
+  }
+  .team__description {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .team__title {
+    font-size: 4.8rem;
+  }
+  .team__description {
+    font-size: 2.6rem;
+  }
+}
+
+@-webkit-keyframes color {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 0;
+  }
+}
+
+@keyframes color {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes gray {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: .2;
+  }
+  87% {
+    opacity: .2;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(5%) scale(1.1);
+            transform: translateX(5%) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes gray {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: .2;
+  }
+  87% {
+    opacity: .2;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(5%) scale(1.1);
+            transform: translateX(5%) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes text {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #dedede;
+  background-color: #e4e4e4;
   color: black;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -833,6 +1359,8 @@ html {
 
 .psychotherapies .psychotherapy {
   padding-bottom: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .psychotherapies .psychotherapy:nth-last-of-type(1) {
@@ -879,8 +1407,12 @@ html {
 }
 
 .psychotherapies .psychotherapy__image {
-  margin-top: 10px;
   width: 100%;
+}
+
+.psychotherapies .psychotherapy__image-link {
+  margin-top: 10px;
+  display: block;
 }
 
 .psychotherapies .psychotherapy__make-visit {
@@ -920,6 +1452,21 @@ html {
   border-radius: calc(2 * 5px);
   -webkit-animation: moveGradient 4s linear infinite;
           animation: moveGradient 4s linear infinite;
+}
+
+.psychotherapies .psychotherapy:nth-of-type(1), .psychotherapies .psychotherapy:nth-of-type(3) {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+.psychotherapies .psychotherapy:nth-of-type(2), .psychotherapies .psychotherapy:nth-of-type(4) {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+.psychotherapies .psychotherapy__active {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
 }
 
 @-webkit-keyframes moveGradient {
@@ -1047,7 +1594,7 @@ html {
 
 .banner-cent-psych {
   background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
-  height: 70vh;
+  height: 85vh;
 }
 
 .banner__title-cent-psych {
@@ -1161,7 +1708,6 @@ html {
 }
 
 .psychotherapy-info {
-  background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1176,6 +1722,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.psychotherapy-info--center {
+  background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
 }
 
 .psychotherapy-info__text {
@@ -1244,6 +1794,35 @@ html {
 @media (orientation: landscape) and (min-width: 1024px) {
   .psychotherapy-info__text {
     font-size: 2.7rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+  .psychotherapy-info__text {
+    font-size: 3rem;
+    line-height: 70px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1700px) {
+  .psychotherapy-info__text {
+    font-size: 3.3rem;
+    line-height: 80px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1900px) {
+  .psychotherapy-info__text {
+    font-size: 3.6rem;
+    line-height: 90px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .psychotherapy-info__text {
+    font-size: 4rem;
+    padding: 20px 200px;
+    line-height: 100px;
   }
 }
 
@@ -1857,6 +2436,7 @@ html {
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 50;
 }
 
 .contact__phone {
@@ -1883,6 +2463,325 @@ html {
 @media (min-width: 1024px) {
   .contact {
     display: none;
+  }
+}
+
+.assistance__item {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.assistance__item-image {
+  width: 100%;
+}
+
+.assistance__item-description {
+  font-size: 1.4rem;
+  padding: 20px 10px;
+  line-height: 30px;
+}
+
+.assistance__item:nth-of-type(1), .assistance__item:nth-of-type(3) {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+.assistance__item:nth-of-type(2), .assistance__item:nth-of-type(4) {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+.assistance__item__active {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+@media (min-width: 360px) {
+  .assistance__item-description {
+    font-size: 1.6rem;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 480px) {
+  .assistance__item-description {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 800px) {
+  .assistance {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto auto auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: auto auto auto auto / 1fr 1fr;
+  }
+  .assistance__item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: auto;
+        grid-template: 1fr 1fr / auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .assistance__item-description {
+    padding: 0;
+    padding-left: 10px;
+    font-size: 1.9rem;
+    line-height: 40px;
+  }
+  .assistance__item-description--up {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+@media (min-width: 960px) {
+  .assistance__item-description {
+    font-size: 2.1rem;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .assistance__item-description {
+    font-size: 2.2rem;
+    line-height: 55px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .assistance__item-description {
+    font-size: 2.4rem;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .assistance__item-description {
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .assistance__item-description {
+    font-size: 2.6rem;
+    line-height: 90px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .assistance__item-description {
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .assistance__item-description {
+    font-size: 2.8rem;
+    line-height: 115px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .assistance__item-description {
+    font-size: 3rem;
+    line-height: 150px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .assistance-test {
+    -ms-grid-rows: auto auto;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template: auto auto / 1fr 1fr 1fr 1fr;
+  }
+  .assistance-test .assistance__item {
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: auto;
+        grid-template: 1fr 1fr / auto;
+  }
+  .assistance-test .assistance__item .assistance__item-description {
+    font-size: 2rem;
+    line-height: 42px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .assistance-test .assistance__item .assistance__item-description {
+    font-size: 2.1rem;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .assistance-test .assistance__item .assistance__item-description {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+}
+
+.banner-child-psych {
+  background-image: url("../../../images/psychoterapia_dzieci/background_banner.jpg");
+  height: 70vh;
+}
+
+.banner__title-child-psych {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 360px) {
+  .banner__title-child-psych {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .banner__title-child-psych {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .banner__title-child-psych {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner__title-child-psych {
+    padding: 40px;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .banner__title-child-psych {
+    font-size: 3.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner__title-child-psych {
+    padding: 50px;
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner__title-child-psych {
+    font-size: 4rem;
+  }
+}
+
+.psychotherapy-info {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear 500ms;
+  transition: opacity 500ms linear, visibility 0s linear 500ms;
+}
+
+.psychotherapy-info--child {
+  height: 100vh;
+  background-image: url("../../../images/psychoterapia_dzieci/background_text.jpg");
+}
+
+.psychotherapy-info--child__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  line-height: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.psychotherapy-info__active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 500ms linear, visibility 0s linear;
+  transition: opacity 500ms linear, visibility 0s linear;
+}
+
+@media (orientation: landscape) {
+  .psychotherapy-info--child {
+    height: 220vh;
+  }
+}
+
+@media (min-width: 360px) {
+  .psychotherapy-info--child__text {
+    font-size: 1.8rem;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 411px) {
+  .psychotherapy-info--child__text {
+    font-size: 2rem;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 480px) {
+  .psychotherapy-info--child__text {
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 600px) {
+  .psychotherapy-info--child__text {
+    font-size: 2.5rem;
+    line-height: 65px;
+  }
+}
+
+@media (min-width: 768px) {
+  .psychotherapy-info--child__text {
+    font-size: 2.8rem;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 800px) {
+  .psychotherapy-info--child__text {
+    line-height: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .psychotherapy-info--child {
+    height: 100vh;
+  }
+  .psychotherapy-info--child__text {
+    line-height: 95px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .psychotherapy-info--child__text {
+    font-size: 3.1rem;
+    line-height: 130px;
   }
 }
 /*# sourceMappingURL=main.css.map */
