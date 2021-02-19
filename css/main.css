@@ -2466,6 +2466,15 @@ html {
   }
 }
 
+.help-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 400;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 10px 0 30px;
+}
+
 .assistance__item {
   -webkit-transition: 1s;
   transition: 1s;

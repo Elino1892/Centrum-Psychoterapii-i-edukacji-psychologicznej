@@ -1,4 +1,13 @@
+.help-title{
+      font-size: 3rem;
+      text-align: center;
+      font-weight: 400;
+      flex-basis: 100%;
+      padding: 10px 0 30px;
+}
+
 .assistance{
+
   &__item{
     &-image{
       width: 100%;
