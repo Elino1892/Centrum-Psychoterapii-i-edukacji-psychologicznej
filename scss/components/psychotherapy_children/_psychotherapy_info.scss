@@ -1,9 +1,10 @@
 .psychotherapy-info{
 
   &--child{
-    height: 100vh;
+    height: auto;
     background-image: url("../../../images/psychoterapia_dzieci/background_text.jpg");
     &__text{
+      padding: 40px;
       display: flex;
       height: 100%;
       justify-content: center;
@@ -33,13 +34,7 @@
   
 }
 
-@media (orientation: landscape){
-  .psychotherapy-info{
-    &--child{
-      height: 220vh;
-    }
-  }
-}
+
 
 @media(min-width:360px){
   .psychotherapy-info{ 
@@ -120,9 +115,9 @@
 @media(min-width:1024px){
   .psychotherapy-info{ 
     &--child{
-      height: 100vh;
       &__text{
         line-height: 95px;
+        
       }
     }
     
@@ -131,16 +126,17 @@
 }
 
 
-@media(min-width:1200px){
-  .psychotherapy-info{ 
-    &--child{
-      
-      &__text{
+@media(min-width:1200px) and (min-height:500px) {
+  .psychotherapy-info {
+    &--child {
+
+      height: 100vh;
+      &__text {
         font-size: 3.1rem;
         line-height: 130px;
       }
     }
-    
+
   }
-  
+
 }

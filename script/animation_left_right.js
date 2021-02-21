@@ -68,7 +68,7 @@ const wchichFile = (sectionsArray,str) => {
 }
  
 
-  else if(windowWidth > 800 && windowWidth < 1200){
+  else if(windowWidth > 800 && windowWidth < 1600){
     if (scrollValue > sectionsFromTop[i] + sectionsHeight[i] / 3 - windowHeight) {
       sectionsArray[i].classList.add(`${str}__active`);
     }
@@ -77,17 +77,17 @@ const wchichFile = (sectionsArray,str) => {
     }
   }
 
-  else if(windowWidth > 1600){
-    if (scrollValue > sectionsFromTop[i] + sectionsHeight[i] / 2 - windowHeight) {
-      sectionsArray[i].classList.add(`${str}__active`);
-    }
-    if (scrollValue < sectionsFromTop[i] - windowHeight) {
-      sectionsArray[i].classList.remove(`${str}__active`);
-    }
-  }
+  // else if(windowWidth > 1600){
+  //   if (scrollValue > sectionsFromTop[i] + sectionsHeight[i] / 2 - windowHeight) {
+  //     sectionsArray[i].classList.add(`${str}__active`);
+  //   }
+  //   if (scrollValue < sectionsFromTop[i] - windowHeight) {
+  //     sectionsArray[i].classList.remove(`${str}__active`);
+  //   }
+  // }
   
   else {
-  if (scrollValue > sectionsFromTop[i] + sectionsHeight[i] - windowHeight) {
+  if (scrollValue > sectionsFromTop[i] + sectionsHeight[i] / 2 - windowHeight) {
     sectionsArray[i].classList.add(`${str}__active`);
   }
 

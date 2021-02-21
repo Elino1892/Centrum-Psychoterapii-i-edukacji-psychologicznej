@@ -12,15 +12,22 @@
   <div class="wrapper">
 
 
-    <nav class="menu-mobile">
+<nav class="menu-mobile">
       <ul class="menu-mobile__list">
-        <li class="menu-mobile__list-item"><a href="../pages/index.html" class="menu-mobile__item">Strona główna</a></li>
-        <li class="menu-mobile__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-mobile__item">Centrum psychoterapii</a></li>
-        <li class="menu-mobile__list-item"><a href="../pages/psychoterapia_dzieci.html" class="menu-mobile__item">Centrum edukacyjne</a></li>
-        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Coaching</a></li>
-        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Mediacje</a></li>
-        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Aktualności</a></li>
-        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item">Kontakt</a></li>
+        <li class="menu-mobile__list-item"><a href="../pages/index.html" class="menu-mobile__item menu-mobile__item--main"><i class="fas fa-home"></i>Strona główna</a></li>
+        <li class="menu-mobile__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-mobile__item menu-mobile__item-nav"><i class="fas fa-clinic-medical"></i>Centrum psychoterapii</a><i class="fas fa-arrow-down"></i>
+        <ul class="menu-mobile__list menu-mobile__list-subnav">
+          <li class="menu-mobile__list-item menu-mobile__list-subnav-item"><a href="#" class="menu-mobile__item"><i class="fas fa-arrow-right"></i>Psychoterapia indywidualna</a></li>
+          <li class="menu-mobile__list-item menu-mobile__list-subnav-item"><a href="#" class="menu-mobile__item"><i class="fas fa-arrow-right"></i>Psychoterapia grupowa</a></li>
+          <li class="menu-mobile__list-item menu-mobile__list-subnav-item"><a href="../pages/psychoterapia_dzieci.html" class="menu-mobile__item"><i class="fas fa-arrow-right"></i>Psychoterapia dzieci i młodzieży</a></li>
+          <li class="menu-mobile__list-item menu-mobile__list-subnav-item"><a href="#" class="menu-mobile__item"><i class="fas fa-arrow-right"></i>Psychoterapia rodziny</a></li>
+
+        </ul></li>
+        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item"><i class="fas fa-shapes"></i>Centrum edukacyjne</a></li>
+        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item"><i class="fas fa-child"></i>Coaching</a></li>
+        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item"><i class="fas fa-hands-helping"></i>Mediacje</a></li>
+        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item"><i class="far fa-newspaper"></i>Aktualności</a></li>
+        <li class="menu-mobile__list-item"><a href="#" class="menu-mobile__item"><i class="fas fa-phone-square-alt"></i>Kontakt</a></li>
       </ul>
     </nav>
 
@@ -40,19 +47,28 @@
       <div class="contacts-header__item"><i class="far fa-envelope contacts-header__item-image--mail"></i><span class="contacts-header__item-text">mail@mail.com</span></div>
     </section>
 
-
+ <div class="container-menu">
     <nav class="menu-desktop">
       <ul class="menu-desktop__list">
-        <li class="menu-desktop__list-item"><a href="../pages/index.html" class="menu-desktop__item">Strona główna</a></li>
-        <li class="menu-desktop__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-desktop__item">Centrum psychoterapii</a></li>
-        <li class="menu-desktop__list-item"><a href="../pages/psychoterapia_dzieci.html" class="menu-desktop__item">Centrum edukacyjne</a></li>
+        <li class="menu-desktop__list-item"><a href="../pages/index.html" class="menu-desktop__item menu-desktop__item--main">Strona główna</a></li>
+        <li class="menu-desktop__list-item"><a href="../pages/centrum_psychoterapii.html" class="menu-desktop__item menu-desktop__item-subnav">Centrum psychoterapii<i class="fa fa-caret-down"></i></a>
+        <ul class="menu-desktop__list menu-desktop__list-subnav">
+          <div class="space"></div>
+          <div class="arrow"></div>
+          <li class="menu-desktop__list-item menu-desktop__list-subnav-item"><a href="#" class="menu-desktop__item">Psychoterapia indywidualna</a></li>
+          <li class="menu-desktop__list-item menu-desktop__list-subnav-item"><a href="#" class="menu-desktop__item">Psychoterapia grupowa</a></li>
+          <li class="menu-desktop__list-item menu-desktop__list-subnav-item"><a href="../pages/psychoterapia_dzieci.html" class="menu-desktop__item">Psychoterapia dzieci i młodzieży</a></li>
+          <li class="menu-desktop__list-item menu-desktop__list-subnav-item"><a href="#" class="menu-desktop__item">Psychoterapia rodziny</a></li>
+        </ul>
+        </li>
+        <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Centrum edukacyjne</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Coaching</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Mediacje</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Aktualności</a></li>
         <li class="menu-desktop__list-item"><a href="#" class="menu-desktop__item">Kontakt</a></li>
       </ul>
     </nav>
-
+</div>
 
     <header class="banner banner-child-psych">
       <h1 class="banner__title banner__title-child-psych">Pomoc psychologiczna indywidualna i grupowa dla dzieci i młodzieży

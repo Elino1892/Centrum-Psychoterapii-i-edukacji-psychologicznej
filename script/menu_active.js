@@ -7,19 +7,22 @@ $(document).ready(function ($) {
   }
   // console.log(url);
   let activePage = url;
-  $('.menu-desktop a').each(function () {
+  $('.menu-desktop a, .menu-mobile a').each(function () {
       var linkPage = this.href;
-      if (activePage == linkPage) {
-          $(this).closest("a").addClass("current_page");
-          // $(this).find("i").attr('id', 'current_page_border');
-      }
+    if (activePage == linkPage) {
+      $(this).closest("a").addClass("current_page");
+    }
   });
-  $('.menu-mobile a').each(function () {
-      var linkPage = this.href;
-      if (activePage == linkPage) {
-          $(this).closest("a").addClass("current_page");
-          // $(this).find("i").attr('id', 'current_page_border');
-      }
-  });
+
+  
+
+  // $('.menu-mobile a').each(function () {
+  //     var linkPage = this.href;
+  //     if (activePage == linkPage) {
+  //         $(this).closest("a").addClass("current_page");
+  //         // $(this).find("i").attr('id', 'current_page_border');
+  //     }
+  // });
   
 });
+
