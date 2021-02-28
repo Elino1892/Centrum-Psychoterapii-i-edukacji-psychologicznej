@@ -2741,6 +2741,7 @@ html {
   .coaching-articles .coaching__image {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    width: 50%;
   }
   .coaching-articles .coaching__image--right {
     -webkit-box-ordinal-group: 2;

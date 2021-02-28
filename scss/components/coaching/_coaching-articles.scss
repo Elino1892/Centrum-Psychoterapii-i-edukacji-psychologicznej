@@ -41,6 +41,7 @@
       width: 100%;
       @media(min-width:1200px) {
         flex-basis: 50%;
+         width: 50%;
         &--right {
           order: 1;
         }
