@@ -2859,6 +2859,7 @@ html {
   .individual-psych-info__image {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    width: 50%;
   }
 }
 
