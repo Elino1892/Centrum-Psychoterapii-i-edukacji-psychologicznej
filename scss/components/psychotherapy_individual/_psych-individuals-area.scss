@@ -1,0 +1,93 @@
+.psych-individuals-area{
+  display: grid;
+  grid-template-columns: 1fr;
+  // gap: 10px;
+  padding: 100px 20px 40px;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  &__title{
+    position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2.3rem;
+        @media(min-width: 600px){
+          font-size: 3rem;
+        }
+  }
+  &__item{
+    padding: 20px;
+    text-align: center;
+  &:nth-of-type(2n+1){
+    background-color: rgb(194,194,194);
+  }
+  &--desktop-right{
+    margin-bottom: 20px;
+  }
+  &-title{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    width: 100%;
+    @media(min-width: 600px) {
+      font-size: 2.2rem;
+    }
+    @media(min-width: 768px) {
+      font-size: 2.4rem;
+    }
+  }
+  &-description{
+    text-align: left;
+    padding-top: 10px;
+    line-height: 3em;
+    font-size: 1.5rem;
+    @media(min-width: 600px) {
+      font-size: 1.8rem;
+    }
+    @media(min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+  @media(min-width: 1400px){
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    &__item{
+      &:nth-of-type(5) {
+        background-color: transparent;
+      }
+      &--desktop-right {
+          grid-area: 2/3/3/4;
+      }
+    // &:nth-of-type(2n+1) {
+    //   background-color: rgb(194, 194, 194);
+    // }
+    // &:nth-of-type(3) {
+    //   background-color: transparent;
+    // }
+  }
+  .psychotherapies {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(194, 194, 194);
+    // padding: 20px;
+
+    // z-index: -1;
+    .psychotherapy__image-make-visit--center {
+      // padding: 20px;
+      flex-basis: 100%;
+      z-index: 100;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // background-color: rgb(194, 194, 194);
+    }
+  }
+  }
+  
+}

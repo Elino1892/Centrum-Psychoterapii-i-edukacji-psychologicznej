@@ -6,15 +6,25 @@
     font-size: 1.6rem;
     text-align: center;
     font-weight: 400;
+    padding-bottom: 20px;
     // width: 70%;
     // margin: 0 auto;
+  }
+}
+
+@media (min-width: 411px) {
+  .quotation {
+    &__example {
+      font-size: 2rem;
+    }
   }
 }
 
 @media (min-width: 600px){
   .quotation{
     &__example{
-      font-size: 1.8rem;
+      font-size: 2.3rem;
+      line-height: 45px;
     }
   }
 }
@@ -22,7 +32,8 @@
 @media (min-width: 700px){
   .quotation{
     &__example{
-      font-size: 1.9rem;
+      font-size: 2.4rem;
+      line-height: 55px;
     }
   }
 }
@@ -30,7 +41,7 @@
 @media (min-width: 800px){
   .quotation{
     &__example{
-      font-size: 2.3rem;
+      font-size: 2.7rem;
     }
   }
 }
@@ -38,7 +49,7 @@
 @media (min-width: 900px){
   .quotation{
     &__example{
-      font-size: 2.7rem;
+      font-size: 2.8rem;
     }
   }
 }
@@ -49,7 +60,7 @@
     &__example{
       font-size: 3rem;
       line-height: 60px;
-    width: 70%;
+    // width: 70%;
     margin: 0 auto;
     }
   }

@@ -10,7 +10,39 @@
   &-cent-psych{
     background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
     height: $header-height-mobile+100px;
+    
   }
+  &-coaching {
+    background-image: url("../../../images/coaching/background_banner.jpg");
+    @media(min-width:1400px) {
+      // background-image: url("../../../images/coaching/background_banner_desktop.jpg");
+      background-position: top !important;
+      
+    }
+    @media(min-width:1700px) {
+      background-position: center 60% !important;
+
+    }
+    // height: $header-height-mobile+100px;
+  }
+
+  &-individual-psych {
+    background-image: url("../../../images/psychoterapia_indywidualna/background_banner.jpg");
+
+    @media(min-width:1400px) {
+      // background-image: url("../../../images/coaching/background_banner_desktop.jpg");
+      background-position: top !important;
+
+    }
+
+    // @media(min-width:1700px) {
+    //   background-position: center 60% !important;
+
+    // }
+
+    // height: $header-height-mobile+100px;
+  }
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -225,7 +257,7 @@
 
 
 
-@media (orientation: landscape) and (max-width:1200px){
+@media (orientation: landscape) and (max-width:900px){
   .banner{
     height: 100vh;
   }

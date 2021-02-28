@@ -1,9 +1,12 @@
 .trends{
   display: flex;
   flex-wrap: wrap;
+  // align-items: center;
+  // justify-content: center;
   flex-basis: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  // min-height: 100vh;
   &__trend{
     // display: flex;
     // justify-content: center;
@@ -14,6 +17,8 @@
     text-decoration: none;
     // display: block;
     height: 50vh;
+    
+    // min-width: 500px;
     flex-basis: 100%;
     // background-color: rgb(204, 204, 204);
     background-size: cover;
@@ -52,7 +57,11 @@
     //   transform: translate(50%,0);
     // }
     &-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
+      height: 8vh;
       // z-index: 1;
       text-shadow: 0 0 4px black;
       background-color: rgba(0,0,0,.5);
@@ -65,7 +74,7 @@
       // line-height: 50vh;
       text-align: center;
       padding: 5px;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     // &-logo--right{
     //   bottom:15%;
@@ -81,41 +90,53 @@
   }
 }
 
-@media(max-width:532px) and (min-height:850px){
+
+
+@media(min-width:600px){
   .trends{
     &__trend{
-      height: 30vh;
-      // &-title{
-      //   line-height: 30vh;
-      // }
-    }
-
-  }
-}
-
-@media(min-width:533px){
-  .trends{
-    &__trend{
-      height: 30vh;
-      flex-basis: 50%;
-      // &-title{
-      //   line-height: 30vh;
-      // }
+      &-title{
+        font-size: 2.5rem;
+      }
     }
   }
 }
 
 
-@media(min-width:533px) and (orientation: landscape){
+@media(orientation: landscape){
   .trends{
     // &-title{
     //   line-height: 60vh;
     // }
     &__trend{
-      height: 60vh;
+      min-height: 450px;
+      &-title{
+        height: 20vh;
+      }
+      // height: 60vh;
     }
   }
 }
+
+@media(orientation: landscape){
+  .trends{
+    &__trend{
+      min-height: 550px;
+      &-title{
+        height: 20vh;
+      }
+    }
+  }
+}
+
+@media(min-width:960px) and (orientation: landscape) {
+  .trends {
+    &__trend {
+      min-height: 650px;
+    }
+  }
+}
+
 
 @media(min-width:768px){
   .trends{
@@ -134,17 +155,18 @@
       display: flex;
       flex-basis: 50%;
       // height: 3vh;
-      background-size: 120%;
+      // background-size: 100%;
       transition: 1s;
       // justify-content: center;
       // align-items: center;
       &:hover{
-        background-size: 150%;
+        // background-size: 150%;
       }
       
       &-title{
-        line-height: 30vh;
         
+        // line-height: 30vh;
+        height: 100%;
         padding: 0;
         opacity: 0;
         transition: 1s;
@@ -157,21 +179,11 @@
   }
 }
 
-@media(min-width:1200px){
-  .trends{
-    &__trend{
-      // height: 50vh;
-  }
-}
-}
 
 @media(min-width:1260px){
   .trends{
     &__trend{
       height: 37vh;
-      &-title{
-        line-height: 37vh;
-      }
   }
 }
 }
@@ -180,20 +192,10 @@
   .trends{
     &__trend{
       height: 45vh;
-      &-title{
-        line-height: 45vh;
-      }
   }
 }
 }
 
-@media(min-width:1550px){
-  .trends{
-    &__trend{
-      // height: 65vh;
-  }
-}
-}
 
 @media(min-width: 1600px){
   .trends{

@@ -1,193 +1,210 @@
 .banner{
   &-cent-psych{
     background-image: url("../../../images/centrum_psychoterapii/background_banner.jpg");
-    height: 85vh;
+    // height: 85vh;
+    min-height: 600px;
   }
     &__title{
     &-cent-psych{
-      padding: 10px;
-      margin: 10px 20px;
-      background-color: rgba(255,255,255,0.5);
-      font-size: 1.3rem;
-      text-transform: none;
-      line-height: 23px;
+      flex-basis: 100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size:4rem;
+      padding: 50px 0;
+      font-weight: 700;
+
+      @media(min-width:480px) {
+        font-size: 4.5rem;
+      }
+
+      @media(min-width:600px) {
+        font-size: 5rem;
+      }
+
+      @media(min-width:1024px) {
+        font-size: 5.5rem;
+      }
+
+      @media(min-width:1200px) {
+        font-size: 6rem;
+      }
      }
     }
 
 }
 
-@media (min-width: 360px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        font-size: 1.5rem;
-        line-height: 30px;
-       }
-      }
-  }
-}
+// @media (min-width: 360px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         font-size: 1.5rem;
+//         line-height: 30px;
+//        }
+//       }
+//   }
+// }
 
-@media (min-width: 410px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        font-size: 1.7rem;
-        line-height: 35px;
-       }
-      }
+// @media (min-width: 410px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         font-size: 1.7rem;
+//         line-height: 35px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (min-width: 480px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        font-size: 1.9rem;
-       }
-      }
+// @media (min-width: 480px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         font-size: 1.9rem;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
 
-@media (min-width: 600px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        font-size: 2.3rem;
-        line-height: 45px;
-       }
-      }
+// @media (min-width: 600px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         font-size: 2.3rem;
+//         line-height: 45px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (min-width: 768px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        line-height: 55px;
-       }
-      }
+// @media (min-width: 768px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         line-height: 55px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
 
-@media (min-width: 800px) and (orientation: portrait){
-  .banner{
-      &__title{
-      &-cent-psych{
-        line-height: 65px;
-       }
-      }
+// @media (min-width: 800px) and (orientation: portrait){
+//   .banner{
+//       &__title{
+//       &-cent-psych{
+//         line-height: 65px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (orientation: landscape) and (max-width: 1200px){
-  .banner{
-    &-cent-psych{
-      height: 100vh;
-    }
-    &__title{
-      &-cent-psych{
-        width: 70%;
-       }
-      }
-  }
-}
+// @media (orientation: landscape) and (max-width: 1200px){
+//   .banner{
+//     &-cent-psych{
+//       height: 100vh;
+//     }
+//     &__title{
+//       &-cent-psych{
+//         width: 70%;
+//        }
+//       }
+//   }
+// }
 
-@media(orientation: landscape) and (min-width: 480px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 1.6rem;
-        line-height: 30px;
-       }
-      }
+// @media(orientation: landscape) and (min-width: 480px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 1.6rem;
+//         line-height: 30px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media(orientation: landscape) and (min-width: 600px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 1.7rem;
-        line-height: 40px;
-       }
-      }
+// @media(orientation: landscape) and (min-width: 600px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 1.7rem;
+//         line-height: 40px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media(orientation: landscape) and (min-width: 720px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 1.9rem;
-       }
-      }
+// @media(orientation: landscape) and (min-width: 720px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 1.9rem;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media(orientation: landscape) and (min-width: 811px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        line-height: 50px;
-       }
-      }
+// @media(orientation: landscape) and (min-width: 811px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         line-height: 50px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media(orientation: landscape) and (min-width: 960px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 2.3rem;
-        line-height: 60px;
-        width: 80%;
-       }
-      }
+// @media(orientation: landscape) and (min-width: 960px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 2.3rem;
+//         line-height: 60px;
+//         width: 80%;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (min-width:1200px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        line-height: 70px;
-        margin-left: 30px;
-       }
-      }
+// @media (min-width:1200px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         line-height: 70px;
+//         margin-left: 30px;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (min-width:1600px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 2.5rem;
-       }
-      }
+// @media (min-width:1600px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 2.5rem;
+//        }
+//       }
   
-  }
-}
+//   }
+// }
 
-@media (min-width:1900px){
-  .banner{
-    &__title{
-      &-cent-psych{
-        font-size: 2.7rem;
-       }
-      }
+// @media (min-width:1900px){
+//   .banner{
+//     &__title{
+//       &-cent-psych{
+//         font-size: 2.7rem;
+//        }
+//       }
   
-  }
-}
+//   }
+// }

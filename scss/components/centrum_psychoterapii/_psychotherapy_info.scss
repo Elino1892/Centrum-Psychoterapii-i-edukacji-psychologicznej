@@ -1,8 +1,6 @@
 .psychotherapy-info{
 
-  &--center{
-    background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
-  }
+ 
   
   background-size: cover;
   background-position: center;
@@ -16,8 +14,19 @@
     font-size: 1.8rem;
     padding: 20px;
     text-align: center;
-    line-height: 35px;
+    line-height: 3em;
+    ;
   }
+   &--center {
+     background-image: url("../../../images/centrum_psychoterapii/background_text.jpg");
+     
+    //  @media(min-width: 1200px){
+    min-height: 1000px !important;
+    //  }
+     background-attachment:scroll;
+     background-position: top;
+
+   }
 }
 
 @media(orientation: portrait) and (min-width: 360px){
@@ -32,7 +41,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 2.2rem;
-      line-height: 45px;
+      // line-height: 45px;
     }
   }
 }
@@ -49,7 +58,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 2.6rem;
-      line-height: 55px;
+      // line-height: 55px;
     }
   }
 }
@@ -66,9 +75,9 @@
   .psychotherapy-info{
     &__text{
       font-size: 2rem;
-      line-height: 40px;
+      // line-height: 40px;
     }
-    height: 100vh;
+    // height: 100vh;
   }
 }
 
@@ -76,7 +85,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 2.3rem;
-      line-height: 50px;
+      // line-height: 50px;
     }
   }
 }
@@ -86,7 +95,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 2.5rem;
-      line-height: 60px;
+      // line-height: 60px;
     }
   }
 }
@@ -103,7 +112,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 3rem;
-      line-height: 70px;
+      // line-height: 70px;
     }
   }
 }
@@ -112,7 +121,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 3.3rem;
-      line-height: 80px;
+      // line-height: 80px;
     }
   }
 }
@@ -121,7 +130,7 @@
   .psychotherapy-info{
     &__text{
       font-size: 3.6rem;
-      line-height: 90px;
+      // line-height: 90px;
     }
   }
 }
@@ -131,7 +140,7 @@
     &__text{
       font-size: 4rem;
       padding: 20px 200px;
-      line-height: 100px;
+      // line-height: 100px;
     }
   }
 }
